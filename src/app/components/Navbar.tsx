@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
-
+import logo from '../../../public/logo.png'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -13,192 +13,127 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { ModeToggle } from "./ModeToggle"
 
-const components: { title: string; href: string; description: string }[] = [
+import { ModeToggle } from "./ModeToggle"
+import Image from "next/image"
+
+const courseCategories = [
     {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
-        description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+        title: "Graphic Design",
+        href: "/courses/graphic-design",
+        description: "Master Photoshop, Illustrator & branding from scratch."
     },
     {
-        title: "Hover Card",
-        href: "/docs/primitives/hover-card",
-        description:
-            "For sighted users to preview content available behind a link.",
+        title: "Web Development",
+        href: "/courses/web-development",
+        description: "Become a MERN stack developer with real-world projects."
     },
     {
-        title: "Progress",
-        href: "/docs/primitives/progress",
-        description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        title: "UI/UX Design",
+        href: "/courses/ui-ux",
+        description: "Design intuitive interfaces using Figma and prototyping tools."
     },
     {
-        title: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
-    },
-    {
-        title: "Tabs",
-        href: "/docs/primitives/tabs",
-        description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-    },
-    {
-        title: "Tooltip",
-        href: "/docs/primitives/tooltip",
-        description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-    },
+        title: "Video Editing",
+        href: "/courses/video-editing",
+        description: "Learn Adobe Premiere Pro & After Effects professionally."
+    }
 ]
 
 export function Navbar() {
     return (
-        <div className="flex items-center justify-between container mx-auto py-4 ">
+        <div className="flex items-center justify-between container mx-auto py-4">
             <div>
-                <h1 className="text-2xl font-bold">
-
-                GreatBro
-                </h1>
+                {/* <h1 className="text-2xl font-bold text-primary">Great BroIt</h1> */}
+                <Image src={logo} width={100} height={100} alt="logo" />
             </div>
 
             <NavigationMenu viewport={false}>
                 <NavigationMenuList>
+
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ul className="grid gap-2  md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                <li className="row-span-3">
-                                    <NavigationMenuLink asChild>
-                                        <Link
-                                            className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                                            href="/"
-                                        >
-                                            <div className="mt-4 mb-2 text-lg font-medium">
-                                                shadcn/ui
-                                            </div>
-                                            <p className="text-muted-foreground text-sm leading-tight">
-                                                Beautifully designed components built with Tailwind CSS.
-                                            </p>
-                                        </Link>
-                                    </NavigationMenuLink>
-                                </li>
-                                <ListItem href="/docs" title="Introduction">
-                                    Re-usable components built using Radix UI and Tailwind CSS.
-                                </ListItem>
-                                <ListItem href="/docs/installation" title="Installation">
-                                    How to install dependencies and structure your app.
-                                </ListItem>
-                                <ListItem href="/docs/primitives/typography" title="Typography">
-                                    Styles for headings, paragraphs, lists...etc
-                                </ListItem>
-                            </ul>
-                        </NavigationMenuContent>
+                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                            <Link href="/">Home</Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                        <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                                {components.map((component) => (
-                                    <ListItem
-                                        key={component.title}
-                                        title={component.title}
-                                        href={component.href}
-                                    >
-                                        {component.description}
+                            <ul className="grid w-[500px] gap-2 md:grid-cols-2">
+                                {courseCategories.map((course) => (
+                                    <ListItem key={course.title} href={course.href} title={course.title}>
+                                        {course.description}
                                     </ListItem>
                                 ))}
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href="/docs">Docs</Link>
+                            <Link href="/about">About</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>List</NavigationMenuTrigger>
+                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                            <Link href="/contact">Contact</Link>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuTrigger>Dashboard</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="grid w-[300px] gap-4">
+                            <ul className="grid w-[250px] gap-2">
                                 <li>
                                     <NavigationMenuLink asChild>
-                                        <Link href="#">
-                                            <div className="font-medium">Components</div>
-                                            <div className="text-muted-foreground">
-                                                Browse all components in the library.
-                                            </div>
+                                        <Link href="/dashboard">
+                                            <div className="font-medium">My Dashboard</div>
+                                            <p className="text-muted-foreground text-sm">Access your courses and profile.</p>
                                         </Link>
                                     </NavigationMenuLink>
                                     <NavigationMenuLink asChild>
-                                        <Link href="#">
-                                            <div className="font-medium">Documentation</div>
-                                            <div className="text-muted-foreground">
-                                                Learn how to use the library.
-                                            </div>
-                                        </Link>
-                                    </NavigationMenuLink>
-                                    <NavigationMenuLink asChild>
-                                        <Link href="#">
-                                            <div className="font-medium">Blog</div>
-                                            <div className="text-muted-foreground">
-                                                Read our latest blog posts.
-                                            </div>
+                                        <Link href="/dashboard/enrolled">
+                                            <div className="font-medium">Enrolled Courses</div>
+                                            <p className="text-muted-foreground text-sm">Continue learning from your enrolled courses.</p>
                                         </Link>
                                     </NavigationMenuLink>
                                 </li>
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
+                        <NavigationMenuTrigger>Status</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="grid w-[200px] gap-4">
+                            <ul className="grid w-[200px] gap-2">
                                 <li>
                                     <NavigationMenuLink asChild>
-                                        <Link href="#">Components</Link>
-                                    </NavigationMenuLink>
-                                    <NavigationMenuLink asChild>
-                                        <Link href="#">Documentation</Link>
-                                    </NavigationMenuLink>
-                                    <NavigationMenuLink asChild>
-                                        <Link href="#">Blocks</Link>
-                                    </NavigationMenuLink>
-                                </li>
-                            </ul>
-                        </NavigationMenuContent>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ul className="grid w-[200px] gap-4">
-                                <li>
-                                    <NavigationMenuLink asChild>
-                                        <Link href="#" className="flex-row items-center gap-2">
-                                            <CircleHelpIcon />
-                                            Backlog
+                                        <Link href="/status/backlog" className="flex items-center gap-2">
+                                            <CircleHelpIcon className="w-4 h-4" /> Backlog
                                         </Link>
                                     </NavigationMenuLink>
                                     <NavigationMenuLink asChild>
-                                        <Link href="#" className="flex-row items-center gap-2">
-                                            <CircleIcon />
-                                            To Do
+                                        <Link href="/status/todo" className="flex items-center gap-2">
+                                            <CircleIcon className="w-4 h-4" /> To Do
                                         </Link>
                                     </NavigationMenuLink>
                                     <NavigationMenuLink asChild>
-                                        <Link href="#" className="flex-row items-center gap-2">
-                                            <CircleCheckIcon />
-                                            Done
+                                        <Link href="/status/done" className="flex items-center gap-2">
+                                            <CircleCheckIcon className="w-4 h-4" /> Done
                                         </Link>
                                     </NavigationMenuLink>
                                 </li>
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
+
                 </NavigationMenuList>
             </NavigationMenu>
+
             <div>
-                <ModeToggle/>
+                <ModeToggle />
             </div>
         </div>
     )
@@ -214,10 +149,8 @@ function ListItem({
         <li {...props}>
             <NavigationMenuLink asChild>
                 <Link href={href}>
-                    <div className="text-lg leading-none font-medium">{title}</div>
-                    <p className="text-muted-foreground line-clamp-2 text-lg leading-snug">
-                        {children}
-                    </p>
+                    <div className="text-lg font-medium">{title}</div>
+                    <p className="text-muted-foreground text-sm leading-snug">{children}</p>
                 </Link>
             </NavigationMenuLink>
         </li>
