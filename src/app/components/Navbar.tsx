@@ -13,6 +13,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { ModeToggle } from "./ModeToggle"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -54,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
     return (
-        <div className="flex items-center justify-between container mx-auto">
+        <div className="flex items-center justify-between container mx-auto py-4 ">
             <div>
                 <h1 className="text-2xl font-bold">
 
@@ -67,7 +68,7 @@ export function Navbar() {
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>Home</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                            <ul className="grid gap-2  md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-3">
                                     <NavigationMenuLink asChild>
                                         <Link
@@ -196,7 +197,9 @@ export function Navbar() {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-            {/* <div></div> */}
+            <div>
+                <ModeToggle/>
+            </div>
         </div>
     )
 }
@@ -211,8 +214,8 @@ function ListItem({
         <li {...props}>
             <NavigationMenuLink asChild>
                 <Link href={href}>
-                    <div className="text-sm leading-none font-medium">{title}</div>
-                    <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+                    <div className="text-lg leading-none font-medium">{title}</div>
+                    <p className="text-muted-foreground line-clamp-2 text-lg leading-snug">
                         {children}
                     </p>
                 </Link>
