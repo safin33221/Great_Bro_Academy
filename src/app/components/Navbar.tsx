@@ -46,7 +46,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div className="container mx-auto px-4 py-4 flex items-center justify-between ">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Image src={logo} width={100} height={100} alt="logo" />

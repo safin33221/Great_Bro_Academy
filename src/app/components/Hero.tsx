@@ -1,0 +1,91 @@
+"use client"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Autoplay } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/navigation"
+import Link from "next/link"
+import Image, { StaticImageData } from "next/image"
+
+import img1 from "../../../public/images/seminar-1.jpg"
+import img2 from "../../../public/images/seminar-2.jpg"
+import img3 from "../../../public/images/seminar-1.jpg"
+
+type Seminar = {
+    id: string
+    title: string
+    date: string
+    description: string
+    image: StaticImageData
+}
+
+const seminars: Seminar[] = [
+    {
+        id: "1",
+        title: "Mastering Graphic Design",
+        date: "2025-07-15",
+        description: "Join our expert-led seminar on branding, Adobe tools, and design psychology.",
+        image: img1,
+    },
+    {
+        id: "2",
+        title: "Modern Web Development",
+        date: "2025-08-01",
+        description: "Learn MERN stack development, deployment & real-world project building.",
+        image: img2,
+    },
+    {
+        id: "3",
+        title: "UI/UX Seminar for Beginners",
+        date: "2025-09-10",
+        description: "Discover wireframes, user flows, and hands-on Figma design with real-time examples.",
+        image: img3,
+    },
+]
+
+export default function HeroSlider() {
+    return (
+        <div className="relative w-full">
+            <Swiper
+                navigation
+                modules={[Navigation, Autoplay]}
+                autoplay={{ delay: 5000 }}
+                loop
+                className="w-full h-[50vh] md:h-[80vh]"
+            >
+                {seminars.map((seminar) => (
+                    <SwiperSlide key={seminar.id}>
+                        <div className="relative w-full h-[50vh] md:h-[80vh]">
+                            {/* Background Image */}
+                            <Image
+                                src={seminar.image}
+                                alt={seminar.title}
+                                fill
+                                className="object-cover z-0"
+                                priority
+                            />
+
+                            {/* Overlay (don't remove this!) */}
+                            <div className="absolute inset-0 bg-blend-overlay bg-black/80  z-10" />
+
+                            {/* Content */}
+                            <div className="absolute z-20 inset-0 flex items-center justify-center text-center text-white px-4">
+                                <div className="max-w-2xl space-y-4">
+                                    <h2 className="text-3xl md:text-5xl font-bold text-primary">{seminar.title}</h2>
+                                    <p className="text-md md:text-base text-gray-200">📅 {new Date(seminar.date).toDateString()}</p>
+                                    <p className="text-base md:text-xl">{seminar.description}</p>
+                                    <Link href={`/seminars/${seminar.id}`}>
+                                        <button className="mt-4 px-6 py-2 bg-orange-600 hover:bg-orange-700 transition-colors rounded text-white font-medium">
+                                            Book Seminar
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    )
+}
