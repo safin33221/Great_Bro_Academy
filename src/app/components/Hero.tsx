@@ -51,11 +51,11 @@ export default function HeroSlider() {
                 modules={[Navigation, Autoplay]}
                 autoplay={{ delay: 5000 }}
                 loop
-                className="w-full h-[50vh] md:h-[80vh]"
+                className="w-full h-[50vh]  lg:h-[80vh]"
             >
                 {seminars.map((seminar) => (
                     <SwiperSlide key={seminar.id}>
-                        <div className="relative w-full h-[50vh] md:h-[80vh]">
+                        <div className="relative w-full h-[50vh]  lg:h-[80vh]">
                             {/* Background Image */}
                             <Image
                                 src={seminar.image}
