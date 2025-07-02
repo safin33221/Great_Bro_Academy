@@ -84,7 +84,7 @@ export default function MentorSection({
                         mentors.map((mentor, idx) => (
                             <div
                                 key={`${mentor.name}-${i}-${idx}`}
-                                className="bg-white dark:bg-card rounded-xl shadow-md p-6 text-center min-w-[250px] max-w-[250px] hover:shadow-xl transition-all"
+                                className="bg-white dark:bg-card rounded-xl shadow-md p-6 my-4 text-center min-w-[250px] max-w-[250px] hover:shadow-xl transition-all"
                             >
                                 <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500">
                                     <Image src={mentor.image} alt={mentor.name} fill className="object-cover" />
