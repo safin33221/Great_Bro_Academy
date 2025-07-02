@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import PrimaryButton from "./common/PrimaryButton"
+import SectionTitle from "./common/SectionTitle"
 
 type Course = {
   id: string
@@ -39,9 +40,7 @@ const courses: Course[] = [
 export default function CourseSection() {
   return (
     <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-background">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">
-        Our Popular Courses
-      </h2>
+      <SectionTitle title="Our Popular Courses" />
       <div className="grid gap-8 grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
         {courses.map((course) => (
           <div key={course.id} className="bg-white dark:bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
