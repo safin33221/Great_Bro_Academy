@@ -73,7 +73,7 @@ export default function HeroSlider() {
                             <div className="absolute inset-0 bg-blend-overlay bg-black/80  z-10" />
 
                             {/* Content */}
-                            <div className="absolute z-20 inset-0 flex items-center justify-center text-center text-white px-4 mb-30 md:mb-0">
+                            <div className="absolute z-20 inset-0 flex items-center justify-center text-center text-white px-4 mb-40 md:mb-0">
                                 <div className="max-w-2xl space-y-4">
                                     <h2 className="text-3xl md:text-5xl font-bold text-primary">{seminar.title}</h2>
                                     <p className="text-md md:text-base text-gray-200">📅 {new Date(seminar.date).toDateString()}</p>
@@ -91,13 +91,13 @@ export default function HeroSlider() {
                 ))}
             </Swiper>
 
-            <button className="custom-prev absolute top-1/2 left-10 z-10 bg-primary  p-2 rounded-full shadow">
+            <button className="custom-prev absolute top-1/2 left-2 md:left-10 z-10 bg-primary  p-2 rounded-full shadow">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
 
-            <button className="custom-next absolute top-1/2 right-10 z-10 bg-primary  p-2 rounded-full shadow">
+            <button className="custom-next absolute top-1/2 right-2 md:right-10 z-10 bg-primary  p-2 rounded-full shadow">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
