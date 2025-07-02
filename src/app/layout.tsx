@@ -37,12 +37,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <nav className="">
+          <div className="max-w-[1920px] mx-auto">
+            <nav className="">
 
-          <Navbar />
-          </nav>
-          {children}
-          <Footer />
+              <Navbar />
+            </nav>
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

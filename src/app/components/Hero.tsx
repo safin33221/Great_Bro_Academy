@@ -10,6 +10,7 @@ import Image, { StaticImageData } from "next/image"
 import img1 from "../../../public/images/seminar-1.jpg"
 import img2 from "../../../public/images/seminar-2.jpg"
 import img3 from "../../../public/images/seminar-1.jpg"
+import PrimaryButton from "./common/PrimaryButton"
 
 type Seminar = {
     id: string
@@ -75,8 +76,8 @@ export default function HeroSlider() {
                                     <p className="text-md md:text-base text-gray-200">📅 {new Date(seminar.date).toDateString()}</p>
                                     <p className="text-base md:text-xl">{seminar.description}</p>
                                     <Link href={`/seminars/${seminar.id}`}>
-                                        <button className="mt-4 px-6 py-2 bg-orange-600 hover:bg-orange-700 transition-colors rounded text-white font-medium">
-                                            Book Seminar
+                                        <button>
+                                            <PrimaryButton title="Book Seminar" />
                                         </button>
                                     </Link>
                                 </div>
