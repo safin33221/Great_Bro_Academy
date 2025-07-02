@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import PrimaryButton from "./common/PrimaryButton"
 
 type Course = {
   id: string
@@ -56,10 +57,9 @@ export default function CourseSection() {
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
               <p className="text-gray-600 dark:text-gray-300 flex-grow">{course.description}</p>
-              <Link href={`/courses/${course.slug}`} className="mt-4">
-                <button className="w-full bg-primary hover:bg-orange-600 text-white font-bold px-4 py-2 rounded transition">
-                  Enroll Now
-                </button>
+              <Link href={`/courses/${course.slug}`} className="mt-4 flex items-center justify-end">
+                <PrimaryButton title="Explore" />
+
               </Link>
             </div>
           </div>

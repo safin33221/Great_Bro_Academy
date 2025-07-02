@@ -48,7 +48,10 @@ export default function HeroSlider() {
     return (
         <div className="relative w-full">
             <Swiper
-                navigation
+                navigation={{
+                    nextEl: ".custom-next",
+                    prevEl: ".custom-prev",
+                }}
                 modules={[Navigation, Autoplay]}
                 autoplay={{ delay: 5000 }}
                 loop
@@ -87,6 +90,18 @@ export default function HeroSlider() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+
+            <button className="custom-prev absolute top-1/2 left-10 z-10 bg-primary  p-2 rounded-full shadow">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <button className="custom-next absolute top-1/2 right-10 z-10 bg-primary  p-2 rounded-full shadow">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
     )
 }

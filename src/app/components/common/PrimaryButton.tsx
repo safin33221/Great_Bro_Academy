@@ -8,7 +8,7 @@ interface PrimaryButtonProps {
 const PrimaryButton = ({ title }: PrimaryButtonProps) => {
     return (
 
-        <span className="mt-4 px-6 py-2 bg-primary transition-colors rounded text-white font-medium">
+        <span className="mt-4 px-6 py-2 bg-primary hover:bg-sidebar-primary transition-colors rounded text-white font-medium">
             {title}
         </span>
     );
