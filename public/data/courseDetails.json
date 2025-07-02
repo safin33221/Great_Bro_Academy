@@ -1,0 +1,218 @@
+[
+  {
+    "id": "course-web-dev-001",
+    "title": "Full Stack Web Development Bootcamp",
+    "slug": "web-development-bootcamp",
+    "category": "Web Development",
+    "description": "Become a full-stack web developer with hands-on projects. Learn to build responsive websites, APIs, and real-world web apps from scratch.",
+    "thumbnail": "/images/courses/web-dev.jpg",
+    "banner": "/images/banners/web-dev-banner.jpg",
+    "level": "Beginner to Advanced",
+    "duration": "6 Months",
+    "language": "English",
+    "price": {
+      "original": 15000,
+      "discounted": 9999,
+      "currency": "BDT"
+    },
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST API",
+      "Git & GitHub"
+    ],
+    "tools": [
+      "VS Code",
+      "Postman",
+      "MongoDB Compass",
+      "Figma",
+      "Chrome DevTools"
+    ],
+    "learningOutcomes": [
+      "Build responsive web apps",
+      "Understand full-stack architecture",
+      "Connect and use APIs",
+      "Deploy apps using Vercel and Render",
+      "Work in a team using Git"
+    ],
+    "projects": [
+      {
+        "title": "Portfolio Website",
+        "tech": ["HTML", "CSS", "JavaScript"]
+      },
+      {
+        "title": "Blog Platform",
+        "tech": ["MERN Stack"]
+      },
+      {
+        "title": "E-commerce App",
+        "tech": ["React", "MongoDB", "Express"]
+      }
+    ],
+    "modules": [
+      {
+        "week": 1,
+        "title": "HTML/CSS Basics"
+      },
+      {
+        "week": 2,
+        "title": "JavaScript Foundations"
+      },
+      {
+        "week": 5,
+        "title": "React & Routing"
+      },
+      {
+        "week": 8,
+        "title": "Backend with Node & MongoDB"
+      },
+      {
+        "week": 10,
+        "title": "Authentication + Deployment"
+      }
+    ],
+    "instructor": {
+      "name": "Mahmudul Hasan",
+      "title": "MERN Stack Developer",
+      "image": "/images/instructors/mahmudul.jpg",
+      "linkedin": "https://linkedin.com/in/mahmudul"
+    },
+    "startDate": "2025-08-01",
+    "certificate": true
+  },
+  {
+    "id": "course-graphic-001",
+    "title": "Professional Graphic Design Course",
+    "slug": "graphic-design-course",
+    "category": "Graphic Design",
+    "description": "Learn the core principles of graphic design, including branding, logo design, poster making, and digital illustration with Adobe tools.",
+    "thumbnail": "/images/courses/graphic.jpg",
+    "banner": "/images/banners/graphic-banner.jpg",
+    "level": "Beginner to Intermediate",
+    "duration": "4 Months",
+    "language": "Bangla",
+    "price": {
+      "original": 12000,
+      "discounted": 8500,
+      "currency": "BDT"
+    },
+    "tools": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Canva",
+      "Figma",
+      "Google Fonts"
+    ],
+    "learningOutcomes": [
+      "Design logos, posters, social media posts",
+      "Master color theory, typography, layout",
+      "Understand client branding requirements",
+      "Export and deliver professional assets"
+    ],
+    "projects": [
+      {
+        "title": "Brand Logo",
+        "tech": ["Illustrator"]
+      },
+      {
+        "title": "Social Media Kit",
+        "tech": ["Photoshop", "Canva"]
+      },
+      {
+        "title": "Product Poster",
+        "tech": ["Photoshop"]
+      }
+    ],
+    "modules": [
+      {
+        "week": 1,
+        "title": "Design Basics & Color Theory"
+      },
+      {
+        "week": 3,
+        "title": "Photoshop Essentials"
+      },
+      {
+        "week": 6,
+        "title": "Illustrator for Branding"
+      },
+      {
+        "week": 10,
+        "title": "Final Project + Portfolio"
+      }
+    ],
+    "instructor": {
+      "name": "Ariana Rahman",
+      "title": "Graphics Design Mentor",
+      "image": "/images/instructors/ariana.jpg",
+      "linkedin": "https://linkedin.com/in/ariana"
+    },
+    "startDate": "2025-08-10",
+    "certificate": true
+  },
+  {
+    "id": "course-spoken-001",
+    "title": "Spoken English Mastery Program",
+    "slug": "spoken-english-course",
+    "category": "Spoken English",
+    "description": "Improve your speaking, listening, and pronunciation skills. Ideal for students, job seekers, and professionals.",
+    "thumbnail": "/images/courses/spoken.jpg",
+    "banner": "/images/banners/spoken-banner.jpg",
+    "level": "Beginner Friendly",
+    "duration": "3 Months",
+    "language": "Bangla + English",
+    "price": {
+      "original": 6000,
+      "discounted": 3999,
+      "currency": "BDT"
+    },
+    "learningOutcomes": [
+      "Communicate fluently in English",
+      "Improve pronunciation and listening",
+      "Boost confidence for public speaking",
+      "Learn grammar and vocabulary"
+    ],
+    "modules": [
+      {
+        "week": 1,
+        "title": "Grammar & Sentence Structure"
+      },
+      {
+        "week": 2,
+        "title": "Daily Conversations Practice"
+      },
+      {
+        "week": 5,
+        "title": "Public Speaking & Interviews"
+      },
+      {
+        "week": 9,
+        "title": "Final Assessment & Presentation"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Interview Role Play"
+      },
+      {
+        "title": "Public Speaking Practice"
+      }
+    ],
+    "instructor": {
+      "name": "Nadia Hossain",
+      "title": "Spoken English Coach",
+      "image": "/images/instructors/nadia.jpg",
+      "linkedin": "https://linkedin.com/in/nadia"
+    },
+    "startDate": "2025-08-20",
+    "certificate": true
+  }
+]

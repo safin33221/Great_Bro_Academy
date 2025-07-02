@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useState } from "react"
-import { MenuIcon, XIcon, CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+import { MenuIcon, XIcon} from "lucide-react"
 import Image from "next/image"
 import logo from '../../../public/logo.png'
 
@@ -111,30 +111,7 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Status</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-2">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/status/backlog" className="flex items-center gap-2">
-                        <CircleHelpIcon className="w-4 h-4" /> Backlog
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="/status/todo" className="flex items-center gap-2">
-                        <CircleIcon className="w-4 h-4" /> To Do
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="/status/done" className="flex items-center gap-2">
-                        <CircleCheckIcon className="w-4 h-4" /> Done
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
+            
 
           </NavigationMenuList>
         </NavigationMenu>

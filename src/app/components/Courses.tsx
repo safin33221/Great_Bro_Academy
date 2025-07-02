@@ -1,43 +1,32 @@
 "use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import PrimaryButton from "./common/PrimaryButton"
 import SectionTitle from "./common/SectionTitle"
+import { useEffect, useState } from "react"
 
 type Course = {
   id: string
   title: string
   description: string
+  techStack: string[]
+  duration: string
   image: string
   slug: string
 }
 
-const courses: Course[] = [
-  {
-    id: "1",
-    title: "Web Development",
-    description: "Master full-stack development with HTML, CSS, JavaScript, and MERN stack.",
-    image: "/images/web.png",
-    slug: "web-development",
-  },
-  {
-    id: "2",
-    title: "Graphic Design",
-    description: "Learn Photoshop, Illustrator, branding and real-world design projects.",
-    image: "/images/graphics.png",
-    slug: "graphic-design",
-  },
-  {
-    id: "3",
-    title: "Spoken English",
-    description: "Improve your fluency, pronunciation, and communication skills confidently.",
-    image: "/images/english.png",
-    slug: "spoken-english",
-  },
-]
+
 
 export default function CourseSection() {
+  const [courses, setCourses] = useState<Course[]>([])
+
+  useEffect(() => {
+    fetch("/data/courseDetails.json")
+      .then((res) => res.json())
+      .then((data) => setCourses(data))
+      .catch((err) => console.error("Failed to load course data:", err))
+  }, [])
+
   return (
     <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-background">
       <SectionTitle title="Our Popular Courses" />

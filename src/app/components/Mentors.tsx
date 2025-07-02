@@ -64,7 +64,7 @@ export default function MentorSection({
     const direction = reverse ? -1 : 1
 
     return (
-        <section className="py-16 px-4 md:px-8 lg:px-16 bg-white dark:bg-background">
+        <section className="py-10 px-4 md:px-8 lg:px-16 dark:bg-background">
             <SectionTitle title="  Meet Our Mentors" />
 
 
