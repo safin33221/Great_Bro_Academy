@@ -1,30 +1,33 @@
 "use client"
 
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { motion } from "framer-motion"
 import { FaLinkedin } from "react-icons/fa"
-import { cn } from "@/lib/utils"
 import { ComponentPropsWithoutRef } from "react"
+import { cn } from "@/lib/utils"
 import SectionTitle from "./common/SectionTitle"
+
+
 import mdRokonWeb from '../../../public/images/Mentors/Md-rokon--python.png'
 import nazmulHossainGraphich from '../../../public/images/Mentors/Nazmul-Hossain-Shaon--Graphic-Design.png'
 import MustakDigitalM from '../../../public/images/Mentors/Md-Mustak--Digital-Marketing.png'
 import TasnimIslamSpokenE from '../../../public/images/Mentors/Tasmia-islam-aurin--Spoken-English.png'
 import BelalHossainAssGD from '../../../public/images/Mentors/Belal-Hossain-Labbi--Assistant-GD.png'
+import SafayetHossanSafinAsWeb from '../../../public/images/Mentors/Safayet-hossan-safin-As-Web.jpg'
+import { MagicCard } from "@/components/MagicCard"
 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
-    className?: string
     reverse?: boolean
     repeat?: number
-    pauseOnHover?: boolean
-}
 
-import type { StaticImageData } from "next/image"
+
+    pauseOnHover?: boolean;
+}
 
 type Mentor = {
     name: string
     expertise: string
-    image: string | StaticImageData
+    image: StaticImageData
     linkedin?: string
 }
 
@@ -54,26 +57,29 @@ const mentors: Mentor[] = [
         linkedin: "https://linkedin.com/in/nadia",
     },
     {
+        name: "Safayet Hossan Safin",
+        expertise: "Assistant Web Instructor",
+        image: SafayetHossanSafinAsWeb,
+        linkedin: "https://www.linkedin.com/in/safayet-hossan-safin",
+    },
+    {
         name: "Belal Hossain",
-        expertise: "Assistance Graphic Design",
+        expertise: "Assistant Graphic Design",
         image: BelalHossainAssGD,
         linkedin: "https://linkedin.com/in/nadia",
     },
 ]
 
 export default function MentorSection({
-
     reverse = false,
     repeat = 2,
-
     ...props
 }: MarqueeProps) {
     const direction = reverse ? -1 : 1
 
     return (
         <section className="py-10 px-4 md:px-8 lg:px-16 dark:bg-background">
-            <SectionTitle title="  Meet Our Mentors" />
-
+            <SectionTitle title="Meet Our Mentors" />
 
             <div className="relative overflow-hidden w-full" {...props}>
                 <motion.div
@@ -83,32 +89,42 @@ export default function MentorSection({
                         repeat: Infinity,
                         repeatType: "loop",
                         ease: "linear",
-                        duration: 20, // 🎯 faster speed (was 20)
+                        duration: 20,
                     }}
                 >
-                    {/* Repeat mentors list twice for seamless looping */}
                     {[...Array(repeat)].flatMap((_, i) =>
                         mentors.map((mentor, idx) => (
-                            <div
+                            <MagicCard
                                 key={`${mentor.name}-${i}-${idx}`}
-                                className="bg-white dark:bg-card rounded-xl border shadow-md p-8 my-4 text-center min-w-[250px] max-w-[270px] hover:shadow-xl transition-all"
+                                className="min-w-[250px] max-w-[270px] p-[1px] rounded-xl"
                             >
-                                <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500">
-                                    <Image src={mentor.image} alt={mentor.name} fill className="object-cover bg-center" />
+                                <div className={`group-hover:[animation-play-state:paused] bg-white dark:bg-card rounded-xl border shadow-md p-6 text-center hover:shadow-xl transition-all`}>
+                                    <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500">
+                                        <Image
+                                            src={mentor.image}
+                                            alt={mentor.name}
+                                            fill
+                                            className="object-cover bg-center"
+                                        />
+                                    </div>
+                                    <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                                        {mentor.name}
+                                    </h3>
+                                    <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">
+                                        {mentor.expertise}
+                                    </p>
+                                    {mentor.linkedin && (
+                                        <a
+                                            href={mentor.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1 mt-2 text-blue-600 dark:text-blue-400 hover:text-blue-800"
+                                        >
+                                            <FaLinkedin /> Connect
+                                        </a>
+                                    )}
                                 </div>
-                                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{mentor.name}</h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">{mentor.expertise}</p>
-                                {mentor.linkedin && (
-                                    <a
-                                        href={mentor.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:text-blue-800"
-                                    >
-                                        <FaLinkedin className="inline mr-1" /> Connect
-                                    </a>
-                                )}
-                            </div>
+                            </MagicCard>
                         ))
                     )}
                 </motion.div>
