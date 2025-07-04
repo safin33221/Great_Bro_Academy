@@ -6,6 +6,11 @@ import { FaLinkedin } from "react-icons/fa"
 import { cn } from "@/lib/utils"
 import { ComponentPropsWithoutRef } from "react"
 import SectionTitle from "./common/SectionTitle"
+import mdRokonWeb from '../../../public/images/Mentors/Md-rokon--python.png'
+import nazmulHossainGraphich from '../../../public/images/Mentors/Nazmul-Hossain-Shaon--Graphic-Design.png'
+import MustakDigitalM from '../../../public/images/Mentors/Md-Mustak--Digital-Marketing.png'
+import TasnimIslamSpokenE from '../../../public/images/Mentors/Tasmia-islam-aurin--Spoken-English.png'
+import BelalHossainAssGD from '../../../public/images/Mentors/Belal-Hossain-Labbi--Assistant-GD.png'
 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
     className?: string
@@ -14,42 +19,44 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
     pauseOnHover?: boolean
 }
 
+import type { StaticImageData } from "next/image"
+
 type Mentor = {
     name: string
     expertise: string
-    image: string
+    image: string | StaticImageData
     linkedin?: string
 }
 
 const mentors: Mentor[] = [
     {
-        name: "Ariana Rahman",
-        expertise: "Graphics Design Mentor",
-        image: "/images/mentor1.jpg",
+        name: "Md Rokon",
+        expertise: "Web Instructor",
+        image: mdRokonWeb,
         linkedin: "https://linkedin.com/in/ariana",
     },
     {
-        name: "Mahmudul Hasan",
-        expertise: "MERN Stack Mentor",
-        image: "/images/mentor2.jpg",
+        name: "Nazmul Hossain Shaon",
+        expertise: "Graphic Design Instructor",
+        image: nazmulHossainGraphich,
         linkedin: "https://linkedin.com/in/mahmudul",
     },
     {
-        name: "Nadia Hossain",
-        expertise: "Spoken English Coach",
-        image: "/images/mentor3.jpg",
+        name: "Md Mustak",
+        expertise: "Digital Marketing Instructor",
+        image: MustakDigitalM,
         linkedin: "https://linkedin.com/in/nadia",
     },
     {
-        name: "Arnob Hossain",
+        name: "Tasnim Islam",
         expertise: "Spoken English Coach",
-        image: "/images/mentor3.jpg",
+        image: TasnimIslamSpokenE,
         linkedin: "https://linkedin.com/in/nadia",
     },
     {
-        name: "Sabrina Mim",
-        expertise: "Spoken English Coach",
-        image: "/images/mentor3.jpg",
+        name: "Belal Hossain",
+        expertise: "Assistance Graphic Design",
+        image: BelalHossainAssGD,
         linkedin: "https://linkedin.com/in/nadia",
     },
 ]
@@ -58,7 +65,7 @@ export default function MentorSection({
 
     reverse = false,
     repeat = 2,
-    
+
     ...props
 }: MarqueeProps) {
     const direction = reverse ? -1 : 1
@@ -84,10 +91,10 @@ export default function MentorSection({
                         mentors.map((mentor, idx) => (
                             <div
                                 key={`${mentor.name}-${i}-${idx}`}
-                                className="bg-white dark:bg-card rounded-xl shadow-md p-6 my-4 text-center min-w-[250px] max-w-[250px] hover:shadow-xl transition-all"
+                                className="bg-white dark:bg-card rounded-xl border shadow-md p-8 my-4 text-center min-w-[250px] max-w-[270px] hover:shadow-xl transition-all"
                             >
-                                <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500">
-                                    <Image src={mentor.image} alt={mentor.name} fill className="object-cover" />
+                                <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500">
+                                    <Image src={mentor.image} alt={mentor.name} fill className="object-cover bg-center" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{mentor.name}</h3>
                                 <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">{mentor.expertise}</p>
