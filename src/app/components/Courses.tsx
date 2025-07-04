@@ -4,21 +4,14 @@ import Link from "next/link"
 import PrimaryButton from "./common/PrimaryButton"
 import SectionTitle from "./common/SectionTitle"
 import { useEffect, useState } from "react"
+import { CourseDetails } from "@/interfaces/course"
 
-type Course = {
-  id: string
-  title: string
-  description: string
-  techStack: string[]
-  duration: string
-  image: string
-  slug: string
-}
+
 
 
 
 export default function CourseSection() {
-  const [courses, setCourses] = useState<Course[]>([])
+  const [courses, setCourses] = useState<CourseDetails[]>([])
 
   useEffect(() => {
     fetch("/data/courseDetails.json")
@@ -33,9 +26,9 @@ export default function CourseSection() {
       <div className="grid gap-8 grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
         {courses.map((course) => (
           <div key={course.id} className="bg-white dark:bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div className="relative h-72 w-full">
+            <div className="relative h-96  w-full">
               <Image
-                src={course.image}
+                src={course?.thumbnail}
                 alt={course.title}
                 fill
                 className="object-center bg-center"
