@@ -1,20 +1,26 @@
 
 
+import Image from "next/image";
 import Link from "next/link"
 
-
+import logo from '../../../public/logo.png'
+import DarkLogo from '../../../public/GREATBRO-ACADEMY-LOGO-white.png';
 
 const Footer = () => {
     return (
         <footer className="   bg-card">
             <div className="max-w-7xl  mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {/* Brand */}
+
                 <div>
-                    <h2 className="text-xl font-bold">Great Bro Academy</h2>
-                    <p className="mt-2 text-sm text-muted-foreground dark:text-orange-300">
+
+                    <Image src={logo} width={100} height={100} alt="logo" className="block dark:hidden" />
+                    <Image src={DarkLogo} width={100} height={100} alt="logo" className="hidden dark:block" />
+                    <p className="mt-2 text-sm text-muted-foreground dark:text-orange-400">
                         Empowering learners with practical IT skills.
                     </p>
                 </div>
+
 
                 {/* Quick Links */}
                 <div>

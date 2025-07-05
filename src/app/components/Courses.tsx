@@ -25,7 +25,7 @@ export default function CourseSection() {
       <SectionTitle title="Our Popular Courses" />
       <div className="grid gap-8 grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
         {courses.map((course) => (
-          <div key={course.id} className="bg-white dark:bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
+          <div key={course.id} className="border bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
             <div className="relative h-96  w-full">
               <Image
                 src={course?.thumbnail}
@@ -36,9 +36,9 @@ export default function CourseSection() {
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 flex-grow">{course.description}</p>
-              <Link href={`/courses/${course.slug}`} className="mt-4 flex items-center justify-end">
+              <h3 className="text-xl font-semibold ">{course.title}</h3>
+              {/* <p className="text-gray-600 dark:text-gray-300 flex-grow">{course.description}</p> */}
+              <Link href={`/courses/${course.slug}`} className=" flex items-center justify-end">
                 <PrimaryButton title="Explore" />
 
               </Link>
