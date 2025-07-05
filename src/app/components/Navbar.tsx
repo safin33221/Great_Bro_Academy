@@ -3,9 +3,10 @@
 import * as React from "react"
 import Link from "next/link"
 import { useState } from "react"
-import { MenuIcon, XIcon} from "lucide-react"
+import { MenuIcon, XIcon } from "lucide-react"
 import Image from "next/image"
 import logo from '../../../public/logo.png'
+import DarkLogo from '../../../public/GREATBRO-ACADEMY-LOGO-white.png';
 
 import {
   NavigationMenu,
@@ -22,22 +23,17 @@ import { ModeToggle } from "./ModeToggle"
 const courseCategories = [
   {
     title: "Graphic Design",
-    href: "/courses/graphic-design",
+    href: "/courses/graphic-design-course",
     description: "Master Photoshop, Illustrator & branding from scratch."
   },
   {
     title: "Web Development",
-    href: "/courses/web-development",
+    href: "/courses/web-development-bootcamp",
     description: "Become a MERN stack developer with real-world projects."
   },
   {
-    title: "UI/UX Design",
-    href: "/courses/ui-ux",
-    description: "Design intuitive interfaces using Figma and prototyping tools."
-  },
-  {
-    title: "Video Editing",
-    href: "/courses/video-editing",
+    title: "Spoken English",
+    href: "/courses/spoken-english-course",
     description: "Learn Adobe Premiere Pro & After Effects professionally."
   }
 ]
@@ -49,7 +45,9 @@ export function Navbar() {
     <div className="container mx-auto px-4 py-4 flex items-center justify-between ">
       {/* Logo */}
       <div className="flex items-center gap-2">
-        <Image src={logo} width={100} height={100} alt="logo" />
+
+        <Image src={logo} width={100} height={100} alt="logo" className="block dark:hidden" />
+        <Image src={DarkLogo} width={100} height={100} alt="logo" className="hidden dark:block" />
         {/* <h1 className="text-xl font-bold hidden sm:block">Greate Bro Id</h1> */}
       </div>
 
@@ -111,7 +109,7 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            
+
 
           </NavigationMenuList>
         </NavigationMenu>

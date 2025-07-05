@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSlider />
       <CourseSection />
       <Mentor/>
-      <h1>Great Bro academy is here</h1>
+     
     </div>
   );
 }

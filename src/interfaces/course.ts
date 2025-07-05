@@ -1,31 +1,36 @@
- export interface CourseDetails {
+export interface CourseDetails {
     id: string
     title: string
     slug: string
-    thumbnail:string
-    category: "Web Development" | "Graphic Design" | "Spoken English"
+    category: string
     description: string
-    objectives: string[]
-    technologies?: string[] // for technical courses only
+    thumbnail: string
+    banner: string
+    level: string
     duration: string
-    level: "Beginner" | "Intermediate" | "Advanced"
     language: string
+    price: {
+        original: number
+        discounted: number
+        currency: string
+    }
+    technologies?: string[] // Only for web dev course
+    tools?: string[] // For web dev & graphic design
+    learningOutcomes: string[]
+    projects: {
+        title: string
+        tech?: string[]
+    }[]
+    modules: {
+        week: number
+        title: string
+    }[]
     instructor: {
         name: string
+        title: string
         image: string
-        bio: string
-        linkedin?: string
+        linkedin: string
     }
-    price: string
-    image: string
-    videoPreview?: string
-    syllabus: {
-        week: number
-        topics: string[]
-    }[]
-    reviews?: {
-        user: string
-        rating: number
-        comment: string
-    }[]
+    startDate: string
+    certificate: boolean
 }
