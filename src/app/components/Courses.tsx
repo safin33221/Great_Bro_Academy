@@ -28,13 +28,13 @@ export default function CourseSection() {
             data-aos="fade-up"
             data-aos-duration="2000"
             key={course.id} className="border bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div className="relative h-96  w-full">
+            <div className="relative h-[350px]  w-full">
               <Image
                 src={course?.thumbnail}
                 alt={course.title}
                 fill
                 className="object-center bg-center"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                // sizes=" 100vw, 33vw"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">

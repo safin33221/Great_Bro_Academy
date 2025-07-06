@@ -16,7 +16,6 @@ import BelalHossainAssGD from '../../../public/images/Mentors/Belal-Hossain-Labb
 import SafayetHossanSafinAsWeb from '../../../public/images/Mentors/Safayet-hossan-safin-As-Web.jpg'
 import { MagicCard } from "@/components/MagicCard"
 
-import 'aos/dist/aos.css';
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
     reverse?: boolean
     repeat?: number
@@ -77,7 +76,7 @@ export default function MentorSection({
     ...props
 }: MarqueeProps) {
     const direction = reverse ? -1 : 1
-    
+
     return (
         <section className="py-10 px-4 md:px-8 lg:px-16 dark:bg-background">
             <SectionTitle title="Meet Our Mentors" />
@@ -105,14 +104,17 @@ export default function MentorSection({
                                 key={`${mentor.name}-${i}-${idx}`}
                                 className="min-w-[250px] max-w-[270px] p-[1px] rounded-xl"
                             >
-                                <div className={`group-hover:[animation-play-state:paused] bg-white dark:bg-card rounded-xl border shadow-md p-6 text-center hover:shadow-xl transition-all`}>
-                                    <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500">
-                                        <Image
-                                            src={mentor.image}
-                                            alt={mentor.name}
-                                            fill
-                                            className="object-cover bg-center"
-                                        />
+                                <div className={`group-hover:[animation-play-state:paused] bg-white dark:bg-card rounded-xl border shadow-md p-6 text-center hover:shadow-xl transition-all `}>
+                                    <div className=" m-2 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 hover:brightness-110 transition-colors  text-white font-medium rounded-full  w-32 h-3w-32 mx-auto ">
+
+                                        <div className="relative w-30 h-30 mx-auto mb-4 rounded-full overflow-hidden ">
+                                            <Image
+                                                src={mentor.image}
+                                                alt={mentor.name}
+                                                fill
+                                                className="object-cover bg-center"
+                                            />
+                                        </div>
                                     </div>
                                     <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                                         {mentor.name}
