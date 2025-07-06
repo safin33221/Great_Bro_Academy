@@ -38,7 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="max-w-[1920px] mx-auto">
-            <nav className="">
+            <nav className="bg-background">
 
               <Navbar />
             </nav>

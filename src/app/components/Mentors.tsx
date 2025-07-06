@@ -15,7 +15,8 @@ import TasnimIslamSpokenE from '../../../public/images/Mentors/Tasmia-islam-auri
 import BelalHossainAssGD from '../../../public/images/Mentors/Belal-Hossain-Labbi--Assistant-GD.png'
 import SafayetHossanSafinAsWeb from '../../../public/images/Mentors/Safayet-hossan-safin-As-Web.jpg'
 import { MagicCard } from "@/components/MagicCard"
-
+import Aos from "aos"
+import 'aos/dist/aos.css';
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
     reverse?: boolean
     repeat?: number
@@ -76,13 +77,18 @@ export default function MentorSection({
     ...props
 }: MarqueeProps) {
     const direction = reverse ? -1 : 1
-
+    Aos.init();
     return (
         <section className="py-10 px-4 md:px-8 lg:px-16 dark:bg-background">
             <SectionTitle title="Meet Our Mentors" />
 
-            <div className="relative overflow-hidden w-full" {...props}>
+            <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+
+                className="relative overflow-hidden w-full" {...props}>
                 <motion.div
+
                     className={cn("flex gap-6 w-max")}
                     animate={{ x: [`0%`, `${direction * -50}%`] }}
                     transition={{
@@ -95,6 +101,7 @@ export default function MentorSection({
                     {[...Array(repeat)].flatMap((_, i) =>
                         mentors.map((mentor, idx) => (
                             <MagicCard
+
                                 key={`${mentor.name}-${i}-${idx}`}
                                 className="min-w-[250px] max-w-[270px] p-[1px] rounded-xl"
                             >

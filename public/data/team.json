@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Md Rokon",
+        "expertise": "Web Instructor",
+        "image": "https://i.ibb.co/Y4MncLQh/Md-rokon-python.png",
+        "linkedin": "https://linkedin.com/in/ariana"
+    },
+    {
+        "name": "Nazmul Hossain Shaon",
+        "expertise": "Graphic Design Instructor",
+        "image": "https://i.ibb.co/JWWjScGT/Nazmul-Hossain-Shaon-Graphic-Design.png",
+        "linkedin": "https://linkedin.com/in/mahmudul"
+    },
+    {
+        "name": "Md Mustak",
+        "expertise": "Digital Marketing Instructor",
+        "image": "https://i.ibb.co/jPBmNfZv/Md-Mustak-Digital-Marketing.png",
+        "linkedin": "https://linkedin.com/in/nadia"
+    },
+    {
+        "name": "Tasnim Islam",
+        "expertise": "Spoken English Coach",
+        "image": "https://i.ibb.co/1fqJJHLP/Tasmia-islam-aurin-Spoken-English.png",
+        "linkedin": "https://linkedin.com/in/nadia"
+    },
+    {
+        "name": "Belal Hossain",
+        "expertise": "Assistant Graphic Design",
+        "image": "https://i.ibb.co/vv3sF55R/Belal-Hossain-Labbi-Assistant-GD.png",
+        "linkedin": "https://linkedin.com/in/nadia"
+    },
+    {
+        "name": "Safayet Hossan Safin",
+        "expertise": "Assistant Web Instructor",
+        "image": "https://i.ibb.co/xqhLjbSb/Safayet-hossan-safin-As-Web.jpg",
+        "linkedin": "https://www.linkedin.com/in/safayet-hossan-safin"
+    }
+]

@@ -5,14 +5,15 @@ import PrimaryButton from "./common/PrimaryButton"
 import SectionTitle from "./common/SectionTitle"
 import { useEffect, useState } from "react"
 import { CourseDetails } from "@/interfaces/course"
+import Aos from "aos"
 
-
+import 'aos/dist/aos.css';
 
 
 
 export default function CourseSection() {
   const [courses, setCourses] = useState<CourseDetails[]>([])
-
+  Aos.init();
   useEffect(() => {
     fetch("/data/courseDetails.json")
       .then((res) => res.json())
@@ -21,11 +22,14 @@ export default function CourseSection() {
   }, [])
 
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-background">
+    <section className="py-12 px-4 md:px-8 lg:px-16 dark:bg-background">
       <SectionTitle title="Our Popular Courses" />
       <div className="grid gap-8 grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
         {courses.map((course) => (
-          <div key={course.id} className="border bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            key={course.id} className="border bg-card rounded-lg shadow-md overflow-hidden flex flex-col">
             <div className="relative h-96  w-full">
               <Image
                 src={course?.thumbnail}
