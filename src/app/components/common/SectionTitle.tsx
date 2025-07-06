@@ -1,9 +1,7 @@
 import React from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+
 const SectionTitle = ({ title }: { title: string }) => {
-    AOS.init();
+
     return (
         <h2
             data-aos="fade-up"
