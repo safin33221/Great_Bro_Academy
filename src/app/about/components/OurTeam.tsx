@@ -15,7 +15,7 @@ const OurTeam = () => {
     console.log(teams);
     return (
         <div className='m-10'>
-            <div className='grid grid-cols-5 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                 {
                     teams?.map((team: ITeam, ids) => (
                         <div key={ids} className="group [perspective:1000px] max-w-md h-[254px] font-sans">

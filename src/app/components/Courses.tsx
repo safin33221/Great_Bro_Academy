@@ -5,15 +5,13 @@ import PrimaryButton from "./common/PrimaryButton"
 import SectionTitle from "./common/SectionTitle"
 import { useEffect, useState } from "react"
 import { CourseDetails } from "@/interfaces/course"
-import Aos from "aos"
 
-import 'aos/dist/aos.css';
 
 
 
 export default function CourseSection() {
   const [courses, setCourses] = useState<CourseDetails[]>([])
-  Aos.init();
+
   useEffect(() => {
     fetch("/data/courseDetails.json")
       .then((res) => res.json())

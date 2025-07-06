@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import { ThemeProvider } from "./components/theme-provider";
+import { AOSProvider } from "@/components/AOSProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <AOSProvider/>
       </body>
     </html>
   );

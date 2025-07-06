@@ -15,7 +15,7 @@ import TasnimIslamSpokenE from '../../../public/images/Mentors/Tasmia-islam-auri
 import BelalHossainAssGD from '../../../public/images/Mentors/Belal-Hossain-Labbi--Assistant-GD.png'
 import SafayetHossanSafinAsWeb from '../../../public/images/Mentors/Safayet-hossan-safin-As-Web.jpg'
 import { MagicCard } from "@/components/MagicCard"
-import Aos from "aos"
+
 import 'aos/dist/aos.css';
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
     reverse?: boolean
@@ -77,7 +77,7 @@ export default function MentorSection({
     ...props
 }: MarqueeProps) {
     const direction = reverse ? -1 : 1
-    Aos.init();
+    
     return (
         <section className="py-10 px-4 md:px-8 lg:px-16 dark:bg-background">
             <SectionTitle title="Meet Our Mentors" />

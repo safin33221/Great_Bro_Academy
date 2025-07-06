@@ -35,13 +35,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     />
                 </div>
 
-                <div className="mx-5 md:m-10 w-1/2">
+                <div className="mx-5 md:m-10 md:w-1/2">
 
                     <h1 className=" text-2xl md:text-4xl my-2 font-bold">{course.title}</h1>
 
                     <p className=" mb-6">{course.description}</p>
 
-                    <div className="grid md:grid-cols-3 gap-4 mb-6 text-sm ">
+                    <div className="grid md:grid-cols-3 gap-4 mb-1 text-sm ">
                         <div className="flex gap-2 items-center"><Timer className="w-4" />Duration: {course.duration}</div>
                         <div className="flex gap-2 items-center"><GraduationCap className="w-4" />Level: {course.level}</div>
                         <div className="flex gap-2 items-center"><Languages className="w-4" />Language: {course.language}</div>
@@ -53,11 +53,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                         )}
                     </div>
 
-                    <div className="bg-card rounded-lg p-4 mb-6">
-                        <h2 className="text-xl font-semibold mb-2">Pricing</h2>
+                    <div className="b rounded-lg py-4 mb-6 flex gap-2">
+                        <h2 className="text-xl font-semibold mb-2">Pricing:</h2>
                         <p className="text-lg">
-                            <span className="line-through mr-2">{course.price.original}৳</span>
                             <span className="text-green-600 font-bold">{course.price.discounted}৳</span>
+                            <span className="line-through mr-2 text-red-500 text-sm relative bottom-2">{course.price.original}৳</span>
                         </p>
                     </div>
                     {course.technologies && (
@@ -65,7 +65,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                             <h2 className="text-lg font-semibold mb-2">Technologies</h2>
                             <div className="flex flex-wrap gap-2">
                                 {course.technologies.map((tech, i) => (
-                                    <span key={i} className="  font-bold text-sm px-2 py-1 rounded">{tech}</span>
+                                    <span key={i} className=" bg-background font-bold text-sm px-2 py-1 rounded">{tech}</span>
                                 ))}
                             </div>
                         </div>
@@ -75,7 +75,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                             <h2 className="text-lg font-semibold mb-2">Tools:</h2>
                             <div className="flex flex-wrap gap-2">
                                 {course.tools.map((tool, i) => (
-                                    <span key={i} className="  font-semibold text-sm px-2 py-1 rounded">{tool}</span>
+                                    <span key={i} className=" bg-background  font-semibold text-sm px-2 py-1 rounded">{tool}</span>
                                 ))}
                             </div>
                         </div>
