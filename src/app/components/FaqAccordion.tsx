@@ -27,7 +27,7 @@ const faqs = [
 
 const FaqAccordion = () => {
     return (
-        <section className=" mx-auto p-16">
+        <section className=" mx-auto p-4 md:p-16">
 
             <SectionTitle title="Frequently Asked Questions" />
             <Accordion

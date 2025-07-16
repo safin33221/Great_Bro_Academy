@@ -86,6 +86,7 @@ export default function MentorSection({
                 data-aos-duration="2000"
 
                 className="relative overflow-hidden w-full" {...props}>
+                    <p className="text-center mb-7 text-xl"> We are GreatBro Academy – Empowering youth with real-world digital skills.</p>
                 <motion.div
 
                     className={cn("flex gap-6 w-max")}
