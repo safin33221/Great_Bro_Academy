@@ -1,6 +1,8 @@
 import CourseSection from "./components/Courses"
+import FaqAccordion from "./components/FaqAccordion";
 import HeroSlider from "./components/Hero"
 import Mentor from "./components/Mentors"
+import WhatsAppBtn from "./components/WhatsAppBtn";
 
 
 export default function Home() {
@@ -8,8 +10,10 @@ export default function Home() {
     <div className="min-h-screen">
       <HeroSlider />
       <CourseSection />
-      <Mentor/>
-     
+      <Mentor />
+      <FaqAccordion/>
+      <WhatsAppBtn/>
+
     </div>
   );
 }

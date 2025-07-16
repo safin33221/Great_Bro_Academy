@@ -87,7 +87,7 @@ export function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <NavigationMenuTrigger>Dashboard</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[250px] gap-2 p-2">
@@ -107,7 +107,7 @@ export function Navbar() {
                   </li>
                 </ul>
               </NavigationMenuContent>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
 
 
 
