@@ -89,61 +89,52 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
 
 
-            <div className="flex  items-start  mt-36">
-                {/* 👨‍🏫 Learning Outcomes */}
-                <div className="w-1/2 mx-10 flex gap-24">
-                    <div className="mb-7">
-                        <h2 className="text-2xl font-semibold mb-4 border-b pb-2 ">📘 What You will Learn</h2>
-                        <ul className="list-disc pl-6 space-y-2 ">
-                            {course.learningOutcomes.map((item, i) => (
-                                <li key={i} className="leading-relaxed">{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    {/* 🛠 Projects */}
-                    <div className="mb-10">
-                        <h2 className="text-2xl font-semibold mb-4 border-b pb-2 ">💼 Projects</h2>
-                        <ul className="list-disc pl-6 space-y-2 ">
-                            {course.projects.map((proj, i) => (
-                                <li key={i}>
-                                    <span className="font-medium">{proj.title}</span>
-                                    {proj.tech && (
-                                        <span className="ml-2 text-sm ">({proj.tech.join(", ")})</span>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+            {/* Learning + Projects */}
+            <div className="flex flex-col lg:flex-row gap-10 mt-24">
+                <div className="w-full lg:w-1/2 px-2">
+                    <h2 className="text-2xl font-semibold mb-4 border-b pb-2">📘 What You will Learn</h2>
+                    <ul className="list-disc pl-6 space-y-2">
+                        {course.learningOutcomes.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
                 </div>
 
-
-                <div className="mb-10 w-1/2">
-                    <h2 className="text-2xl font-semibold mb-4 border-b pb-2 ">📚 Course Modules</h2>
-                    <ul className="space-y-3">
-                        {course.modules.map((mod, i) => (
-                            <li
-                                key={i}
-                                className="flex items-center gap-3  hover:bg-card p-3 rounded shadow-sm transition"
-                            >
-                                <Layers className="text-blue-600 w-5 h-5 shrink-0" />
-                                <span className="">
-                                    <strong className="text-blue-800">Week {mod.week}:</strong> {mod.title}
-                                </span>
+                <div className="w-full lg:w-1/2 px-2">
+                    <h2 className="text-2xl font-semibold mb-4 border-b pb-2">💼 Projects</h2>
+                    <ul className="list-disc pl-6 space-y-2">
+                        {course.projects.map((proj, i) => (
+                            <li key={i}>
+                                <span className="font-medium">{proj.title}</span>
+                                {proj.tech && (
+                                    <span className="ml-2 text-sm">({proj.tech.join(", ")})</span>
+                                )}
                             </li>
                         ))}
                     </ul>
                 </div>
             </div>
 
+            {/* Modules */}
+            <div className="my-10 px-2">
+                <h2 className="text-2xl font-semibold mb-4 border-b pb-2">📚 Course Modules</h2>
+                <ul className="space-y-3">
+                    {course.modules.map((mod, i) => (
+                        <li
+                            key={i}
+                            className="flex items-start gap-3 hover:bg-card p-3 rounded shadow-sm transition"
+                        >
+                            <Layers className="text-blue-600 w-5 h-5 shrink-0 mt-1" />
+                            <span>
+                                <strong className="text-blue-800">Week {mod.week}:</strong> {mod.title}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
 
-
-            {/* 🗂 Course Modules */}
-
-
-
-
-            {/* 👤 Instructor Info */}
-            <div className="border-t pt-8 mt-10 flex items-center gap-5">
+            {/* Instructor Info */}
+            <div className="border-t pt-8 mt-10 flex flex-col sm:flex-row items-center gap-5 px-2">
                 <Image
                     src={course.instructor.image}
                     alt={course.instructor.name}
@@ -151,9 +142,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     height={90}
                     className="rounded-full object-cover shadow"
                 />
-                <div>
-                    <h3 className="text-xl font-semibold ">{course.instructor.name}</h3>
-                    <p className="text-sm ">{course.instructor.title}</p>
+                <div className="text-center sm:text-left">
+                    <h3 className="text-xl font-semibold">{course.instructor.name}</h3>
+                    <p className="text-sm">{course.instructor.title}</p>
                     <Link
                         href={course.instructor.linkedin}
                         target="_blank"
