@@ -7,10 +7,10 @@ import "swiper/css/navigation"
 import Link from "next/link"
 import Image, { StaticImageData } from "next/image"
 
-import img1 from "../../../public/images/seminar-1.jpg"
-import img2 from "../../../public/images/seminar-2.jpg"
-import img3 from "../../../public/images/seminar-1.jpg"
-import PrimaryButton from "./common/PrimaryButton"
+import img1 from "../../../public/images/Banner/WEB-DEB.png"
+import img2 from "../../../public/images/Banner/GRAPHIC-DESIGN-COURSE.png"
+import img3 from "../../../public/images/Banner/UI-UX.png"
+
 
 type Seminar = {
     id: string
@@ -22,15 +22,15 @@ type Seminar = {
 
 const seminars: Seminar[] = [
     {
-        id: "1",
-        title: "Mastering Graphic Design",
+        id: "/courses/web-development-bootcamp",
+        title: "",
         date: "2025-07-15",
         description: "Join our expert-led seminar on branding, Adobe tools, and design psychology.",
         image: img1,
     },
     {
-        id: "2",
-        title: "Modern Web Development",
+        id: "/courses/graphic-design-course",
+        title: "Mastering Graphic Design",
         date: "2025-08-01",
         description: "Learn MERN stack development, deployment & real-world project building.",
         image: img2,
@@ -55,50 +55,51 @@ export default function HeroSlider() {
                 modules={[Navigation, Autoplay]}
                 autoplay={{ delay: 5000 }}
                 loop
-                className="w-full h-[90vh]"
+                className="w-full  h-[25vh] md:h-[30vh] lg:h-[80vh]"
             >
                 {seminars.map((seminar) => (
                     <SwiperSlide key={seminar.id}>
-                        <div className="relative w-full   h-[90vh]">
+                        <div className="relative w-full h-full ">
                             {/* Background Image */}
                             <Image
                                 src={seminar.image}
                                 alt={seminar.title}
                                 fill
-                                className="object-cover z-0"
+                                className="object-center bg-cover "
                                 priority
                             />
 
                             {/* Overlay (don't remove this!) */}
-                            <div className="absolute inset-0 bg-blend-overlay bg-black/80  z-10" />
+                            <div className="absolute inset-0 bg-blend-overlay bg-black/10  z-10" />
 
-                            {/* Content */}
-                            <div className="absolute z-20 inset-0 flex items-center justify-center text-center text-white px-4 mb-40 md:mb-0">
-                                <div className="max-w-2xl space-y-4">
-                                    <h2 className="text-3xl md:text-4xl font-bold text-primary">{seminar.title}</h2>
-                                    <p className="text-md md:text-base text-gray-200">📅 {new Date(seminar.date).toDateString()}</p>
-                                    <p className="text-base md:text-xl">{seminar.description}</p>
-                                    <Link href={`/seminars/${seminar.id}`}>
-                                        <button>
-                                            <PrimaryButton title="Book Seminar" />
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
+                           
+
+
+                            <Link
+                                className="absolute z-20  flex items-center justify-center text-center text-white px-4 top-5 right-1 md:mb-0"
+                                href={`${seminar.id}`}>
+                                <button >
+                                    <span className=" px-2 py-2 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 hover:brightness-110 transition-colors rounded text-white font-medium text-sm md:text-2xl">
+                                        Book seminar
+                                    </span>
+                                </button>
+                            </Link>
+
+
                         </div>
 
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            <button className="custom-prev absolute top-1/2 left-2 md:left-10 z-10 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 hover:brightness-110 transition-colors  text-white font-medium  p-2 rounded-full shadow">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <button className="custom-prev absolute bg-black m-2 top-1/2 border  left-2 md:left-10 z-10 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 hover:brightness-110 transition-colors  text-white font-medium  p-2 rounded-full shadow">
+                <svg className="w-3 h-3 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
 
-            <button className="custom-next absolute top-1/2 right-2 md:right-10 z-10 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 hover:brightness-110 transition-colors  text-white font-medium  p-2 rounded-full shadow">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <button className="custom-next absolute bg-black m-2 top-1/2 border  right-2 md:right-10 z-10 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 hover:brightness-110 transition-colors  text-white font-medium  p-2 rounded-full shadow">
+                <svg className="w-3 h-3 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
             </button>

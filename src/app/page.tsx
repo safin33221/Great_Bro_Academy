@@ -1,3 +1,4 @@
+import CoreValues from "./about/components/CourseValue";
 import CourseSection from "./components/Courses"
 import FaqAccordion from "./components/FaqAccordion";
 import HeroSlider from "./components/Hero"
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSlider />
       <CourseSection />
       <Mentor />
+      <CoreValues/>
       <FaqAccordion/>
       <WhatsAppBtn/>
 
