@@ -5,23 +5,20 @@ import Link from "next/link"
 
 import logo from '../../../public/logo.png'
 import DarkLogo from '../../../public/GREATBRO-ACADEMY-LOGO-white.png';
+import { FaVoicemail } from "react-icons/fa";
 
 const Footer = () => {
     return (
         <footer className="   bg-card">
-            <div className="max-w-7xl  mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                {/* Brand */}
-
+            <div className="max-w-7xl  mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
                 <div>
 
                     <Image src={logo} width={150} height={150} alt="logo" className="block dark:hidden" />
                     <Image src={DarkLogo} width={150} height={150} alt="logo" className="hidden dark:block" />
-                    <address>
-                        House-2/C,Ground Floor, Road-13, <br />
-                        (Beside Lotus Kamal Tower) <br />
-                        Nikunjo-2,Khilkhet,Dhaka-1229
-                    </address>
+
                 </div>
+                {/* Brand */}
+
 
 
                 {/* Quick Links */}
@@ -53,6 +50,21 @@ const Footer = () => {
                         <li><Link href="https://www.facebook.com/greatbroacademy" target="_blank" className="hover:underline">Facebook</Link></li>
                         <li><Link href="#" className="hover:underline">YouTube</Link></li>
                         <li><Link href="https://www.linkedin.com/company/greatbro-academy" target="_blank" className="hover:underline">LinkedIn</Link></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 className="text-md font-semibold mb-2">Contact Us</h3>
+                    <ul className="space-y-1 text-sm">
+                        <li className="text-bold" ><strong>greatbroacademy@gmail.com</strong></li>
+                        <li >8801837429636</li>
+                        <li><strong>Address:</strong>
+                            <address>
+                                House-2/C,Ground Floor, Road-13, <br />
+                                (Beside Lotus Kamal Tower) <br />
+                                Nikunjo-2,Khilkhet,Dhaka-1229.
+                            </address>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -55,7 +55,7 @@ export default function HeroSlider() {
                 modules={[Navigation, Autoplay]}
                 autoplay={{ delay: 5000 }}
                 loop
-                className="w-full  h-[25vh] md:h-[30vh] lg:h-[80vh]"
+                className="w-full  h-[25vh] md:h-[30vh] lg:h-[70vh]"
             >
                 {seminars.map((seminar) => (
                     <SwiperSlide key={seminar.id}>

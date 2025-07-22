@@ -43,7 +43,10 @@ export default function RootLayout({
 
               <Navbar />
             </nav>
+            <main className=" mx-auto">
+              
             {children}
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
