@@ -4,8 +4,8 @@ import { FaBookOpen, FaHandsHelping, FaBullseye } from 'react-icons/fa';
 
 const CoreValues = () => {
   return (
-    <section className="  py-2 px-4">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="   ">
+      <div className=" py-12 px-4 md:px-8 lg:px-16   mx-auto text-center">
         
         <SectionTitle title='Our Core Values' />
 

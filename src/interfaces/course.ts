@@ -16,7 +16,8 @@ export interface CourseDetails {
     }
     technologies?: string[] // Only for web dev course
     tools?: string[] // For web dev & graphic design
-    learningOutcomes: string[]
+    learningOutcomes: string[],
+    topics: string[],
     projects: {
         title: string
         tech?: string[]

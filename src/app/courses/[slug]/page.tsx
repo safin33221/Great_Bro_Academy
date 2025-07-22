@@ -22,7 +22,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     if (!course) return <div className="text-center text-red-600 mt-10">Course not found</div>
 
     return (
-        <div className=" max-w-[100vw] mx-auto p-4 ">
+        <div className=" max-w-[90vw] mx-auto   ">
 
             <div className="flex flex-col md:flex-row gap-5  justify-center bg-card  border rounded-xl">
                 <div className=" lg:w-1/2 relative h-[250px] md:h-[500px]   overflow-hidden ">
@@ -90,12 +90,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
 
             {/* Learning + Projects */}
-            <div className="flex flex-col lg:flex-row gap-10 mt-24">
+            <div className="flex flex-col lg:flex-row gap-10 mt-14">
                 <div className="w-full lg:w-1/2 px-2">
                     <h2 className="text-2xl font-semibold mb-4 border-b pb-2">📘 What You will Learn</h2>
-                    <ul className="list-disc pl-6 space-y-2">
+                    <ul className="list-disc pl-6 space-y-2 ">
                         {course.learningOutcomes.map((item, i) => (
-                            <li key={i}>{item}</li>
+                            <li className="hover:bg-card p-2" key={i}>{item}</li>
                         ))}
                     </ul>
                 </div>
@@ -104,7 +104,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     <h2 className="text-2xl font-semibold mb-4 border-b pb-2">💼 Projects</h2>
                     <ul className="list-disc pl-6 space-y-2">
                         {course.projects.map((proj, i) => (
-                            <li key={i}>
+                            <li key={i} className="p-2">
                                 <span className="font-medium">{proj.title}</span>
                                 {proj.tech && (
                                     <span className="ml-2 text-sm">({proj.tech.join(", ")})</span>
@@ -122,11 +122,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     {course.modules.map((mod, i) => (
                         <li
                             key={i}
-                            className="flex items-start gap-3 hover:bg-card p-3 rounded shadow-sm transition"
+                            className="flex items-start gap-3 hover:bg-card p-3 rounded shadow-sm transition text-xl my-5 "
                         >
-                            <Layers className="text-blue-600 w-5 h-5 shrink-0 mt-1" />
+                            <Layers className="text-orange-400 w-5 h-5 shrink-0 mt-1" />
                             <span>
-                                <strong className="text-blue-800">Week {mod.week}:</strong> {mod.title}
+                                <strong className="text-orange-400">Week {mod.week}:</strong> {mod.title}
                             </span>
                         </li>
                     ))}

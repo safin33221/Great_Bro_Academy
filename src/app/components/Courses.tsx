@@ -52,12 +52,12 @@ export default function CourseSection() {
               key={course.id}
               className="border bg-card rounded-lg shadow-md overflow-hidden flex flex-col"
             >
-              <div className="relative h-[350px] w-full">
+              <div className="relative h-[300px] w-full ">
                 <Image
                   src={course.thumbnail}
                   alt={course.title}
                   fill
-                  className="object-cover"
+                  className="object-center bg-cover  "
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">

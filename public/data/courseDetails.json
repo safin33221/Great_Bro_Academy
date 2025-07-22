@@ -1,218 +1,368 @@
-[
-  {
-    "id": "course-web-dev-001",
-    "title": "Full Stack Web Development Bootcamp",
-    "slug": "web-development-bootcamp",
-    "category": "Web Development",
-    "description": "Become a full-stack web developer with hands-on projects. Learn to build responsive websites, APIs, and real-world web apps from scratch.",
-    "thumbnail": "https://i.ibb.co/v4Hpb7Zx/Web-PYTHON-DJANGO-1.png",
-    "banner": "/images/banners/web-dev-banner.jpg",
-    "level": "Beginner to Advanced",
-    "duration": "6 Months",
-    "language": "English",
-    "price": {
-      "original": 15000,
-      "discounted": 9999,
-      "currency": "BDT"
+  [
+    {
+      "id": "course-web-dev-001",
+      "title": "Full Stack Web Development Bootcamp",
+      "slug": "web-development-bootcamp",
+      "category": "Web Development",
+      "description": "Become a professional full-stack web developer with real-world projects using Python Django and PHP Laravel. Master frontend design, backend logic, and deployment from scratch.",
+      "thumbnail": "https://i.ibb.co/WW1MhMBQ/WEB-DEV-PYTHON-1.png",
+      "banner": "/images/banners/web-dev-banner.jpg",
+      "level": "Beginner to Advanced",
+      "duration": "6 Months",
+      "language": "English",
+      "price": {
+        "original": 15000,
+        "discounted": 9999,
+        "currency": "BDT"
+      },
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "JavaScript",
+        "Python",
+        "Django",
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "REST API",
+        "Git & GitHub"
+      ],
+      "tools": [
+        "VS Code",
+        "Postman",
+        "MySQL Workbench",
+        "Figma",
+        "Chrome DevTools"
+      ],
+      "learningOutcomes": [
+        "Build full-stack web applications with Django and Laravel",
+        "Develop responsive frontend with modern CSS frameworks",
+        "Create secure RESTful APIs",
+        "Work with relational databases like MySQL",
+        "Collaborate using Git and deploy applications to live servers"
+      ],
+      "projects": [
+        {
+          "title": "Personal Portfolio Website",
+          "tech": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
+        },
+        {
+          "title": "Blog Application with Django",
+          "tech": [
+            "Python",
+            "Django",
+            "SQLite"
+          ]
+        },
+        {
+          "title": "Inventory Management System",
+          "tech": [
+            "PHP",
+            "Laravel",
+            "MySQL"
+          ]
+        },
+        {
+          "title": "Job Board Platform",
+          "tech": [
+            "Django",
+            "Tailwind",
+            "REST API"
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "week": 1,
+          "title": "Introduction to Web Development & HTML/CSS"
+        },
+        {
+          "week": 2,
+          "title": "JavaScript Programming Essentials"
+        },
+        {
+          "week": 4,
+          "title": "Python Programming & Basics of Django"
+        },
+        {
+          "week": 6,
+          "title": "Building Web Apps with Django"
+        },
+        {
+          "week": 8,
+          "title": "PHP Fundamentals & Laravel Framework"
+        },
+        {
+          "week": 10,
+          "title": "REST API Development (Django & Laravel)"
+        },
+        {
+          "week": 12,
+          "title": "Authentication, Authorization & Middleware"
+        },
+        {
+          "week": 14,
+          "title": "Project Deployment & Version Control"
+        }
+      ],
+      "instructor": {
+        "name": "Mahmudul Hasan",
+        "title": "Full Stack Developer (Django & Laravel)",
+        "image": "/images/instructors/mahmudul.jpg",
+        "linkedin": "https://linkedin.com/in/mahmudul"
+      },
+      "startDate": "2025-08-01",
+      "certificate": true
     },
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "JavaScript",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "REST API",
-      "Git & GitHub"
-    ],
-    "tools": [
-      "VS Code",
-      "Postman",
-      "MongoDB Compass",
-      "Figma",
-      "Chrome DevTools"
-    ],
-    "learningOutcomes": [
-      "Build responsive web apps",
-      "Understand full-stack architecture",
-      "Connect and use APIs",
-      "Deploy apps using Vercel and Render",
-      "Work in a team using Git"
-    ],
-    "projects": [
-      {
-        "title": "Portfolio Website",
-        "tech": ["HTML", "CSS", "JavaScript"]
+    {
+      "id": "course-graphic-001",
+      "title": "Professional Graphic Design Course",
+      "slug": "graphic-design-course",
+      "category": "Graphic Design",
+      "description": "Master the essentials of visual design, branding, and digital content creation. Learn to design stunning logos, posters, and marketing materials using industry-standard tools like Adobe Illustrator and Photoshop.",
+      "thumbnail": "https://i.ibb.co/272zVBzH/graphic-1.png",
+      "banner": "/images/banners/graphic-banner.jpg",
+      "level": "Beginner to Intermediate",
+      "duration": "4 Months",
+      "language": "Bangla",
+      "price": {
+        "original": 12000,
+        "discounted": 8500,
+        "currency": "BDT"
       },
-      {
-        "title": "Blog Platform",
-        "tech": ["MERN Stack"]
+      "tools": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Canva",
+        "Figma",
+        "Google Fonts",
+        "Color Hunt",
+        "Font Pair"
+      ],
+      "learningOutcomes": [
+        "Create professional logos, posters, banners, and digital assets",
+        "Apply color theory, typography, and grid layout in design",
+        "Develop brand identity systems for clients",
+        "Use Adobe tools efficiently for various design tasks",
+        "Present and deliver high-quality assets for print and web"
+      ],
+      "projects": [
+        {
+          "title": "Logo Design for Startup Brand",
+          "tech": [
+            "Adobe Illustrator"
+          ]
+        },
+        {
+          "title": "Social Media Content Pack",
+          "tech": [
+            "Photoshop",
+            "Canva",
+            "Google Fonts"
+          ]
+        },
+        {
+          "title": "Product Advertising Poster",
+          "tech": [
+            "Photoshop",
+            "Figma"
+          ]
+        },
+        {
+          "title": "Complete Brand Identity Kit",
+          "tech": [
+            "Illustrator",
+            "Photoshop",
+            "Color Hunt"
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "week": 1,
+          "title": "Design Fundamentals, Typography & Color Theory"
+        },
+        {
+          "week": 2,
+          "title": "Introduction to Branding and Visual Identity"
+        },
+        {
+          "week": 3,
+          "title": "Adobe Photoshop: Interface, Tools & Layers"
+        },
+        {
+          "week": 5,
+          "title": "Designing Posters and Web Banners"
+        },
+        {
+          "week": 6,
+          "title": "Adobe Illustrator: Vector Graphics & Logo Design"
+        },
+        {
+          "week": 8,
+          "title": "Canva & Figma for Social Media & UI Design"
+        },
+        {
+          "week": 10,
+          "title": "Final Project, Portfolio Review & Client Presentation"
+        }
+      ],
+      "instructor": {
+        "name": "Ariana Rahman",
+        "title": "Senior Graphic Design Mentor",
+        "image": "/images/instructors/ariana.jpg",
+        "linkedin": "https://linkedin.com/in/ariana"
       },
-      {
-        "title": "E-commerce App",
-        "tech": ["React", "MongoDB", "Express"]
-      }
-    ],
-    "modules": [
-      {
-        "week": 1,
-        "title": "HTML/CSS Basics"
-      },
-      {
-        "week": 2,
-        "title": "JavaScript Foundations"
-      },
-      {
-        "week": 5,
-        "title": "React & Routing"
-      },
-      {
-        "week": 8,
-        "title": "Backend with Node & MongoDB"
-      },
-      {
-        "week": 10,
-        "title": "Authentication + Deployment"
-      }
-    ],
-    "instructor": {
-      "name": "Mahmudul Hasan",
-      "title": "MERN Stack Developer",
-      "image": "/images/instructors/mahmudul.jpg",
-      "linkedin": "https://linkedin.com/in/mahmudul"
+      "startDate": "2025-08-10",
+      "certificate": true
     },
-    "startDate": "2025-08-01",
-    "certificate": true
-  },
-  {
-    "id": "course-graphic-001",
-    "title": "Professional Graphic Design Course",
-    "slug": "graphic-design-course",
-    "category": "Graphic Design",
-    "description": "Learn the core principles of graphic design, including branding, logo design, poster making, and digital illustration with Adobe tools.",
-    "thumbnail": "https://i.ibb.co/272zVBzH/graphic-1.png",
-    "banner": "/images/banners/graphic-banner.jpg",
-    "level": "Beginner to Intermediate",
-    "duration": "4 Months",
-    "language": "Bangla",
-    "price": {
-      "original": 12000,
-      "discounted": 8500,
-      "currency": "BDT"
-    },
-    "tools": [
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-      "Canva",
-      "Figma",
-      "Google Fonts"
-    ],
-    "learningOutcomes": [
-      "Design logos, posters, social media posts",
-      "Master color theory, typography, layout",
-      "Understand client branding requirements",
-      "Export and deliver professional assets"
-    ],
-    "projects": [
-      {
-        "title": "Brand Logo",
-        "tech": ["Illustrator"]
+    {
+      "id": "course-spoken-001",
+      "title": "Spoken English Mastery Program",
+      "slug": "spoken-english-course",
+      "category": "Spoken English",
+      "description": "This comprehensive Spoken English course is designed to help students, job seekers, and professionals build fluency, improve pronunciation, and gain confidence in real-life communication. The course blends grammar essentials with interactive speaking activities, making it ideal for Bangladeshi learners.",
+      "thumbnail": "https://i.ibb.co/BvRzsFy/Course-1.png",
+      "banner": "/images/banners/spoken-banner.jpg",
+      "level": "Beginner Friendly",
+      "duration": "3 Months",
+      "language": "Bangla + English",
+      "price": {
+        "original": 6000,
+        "discounted": 3999,
+        "currency": "BDT",
+        "paymentOptions": [
+          "One-Time",
+          "Monthly Installment"
+        ],
+        "installmentDetails": {
+          "monthly": 1500,
+          "duration": "3 Months"
+        }
       },
-      {
-        "title": "Social Media Kit",
-        "tech": ["Photoshop", "Canva"]
+      "learningOutcomes": [
+        "Communicate fluently and confidently in daily situations and formal settings",
+        "Improve pronunciation, intonation, and accent for global comprehension",
+        "Gain confidence for job interviews, presentations, and group discussions",
+        "Master basic to intermediate English grammar and vocabulary usage",
+        "Enhance listening comprehension with audio and video-based practice"
+      ],
+      "modules": [
+        {
+          "week": 1,
+          "title": "Introduction to Grammar & Sentence Structure",
+          "topics": [
+            "Parts of speech overview",
+            "Forming correct sentences",
+            "Common grammar mistakes",
+            "Subject-Verb Agreement"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Everyday Conversation Practice",
+          "topics": [
+            "Greetings & Self-Introduction",
+            "Shopping, Traveling, and Food-related conversations",
+            "Role-play activities",
+            "Speaking with confidence"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Vocabulary Building & Listening Practice",
+          "topics": [
+            "Word categories (Nouns, Verbs, Adjectives)",
+            "Daily-use vocabulary",
+            "Listening to native speakers",
+            "Audio & video comprehension activities"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Pronunciation and Accent Neutralization",
+          "topics": [
+            "Sounds & syllables",
+            "Common pronunciation errors for Bengali speakers",
+            "Tongue twisters and speech rhythm"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Public Speaking & Interview Skills",
+          "topics": [
+            "Preparing and delivering short speeches",
+            "Mock interviews and role-playing",
+            "Speaking in front of groups"
+          ]
+        },
+        {
+          "week": 6,
+          "title": "Group Discussions & Debates",
+          "topics": [
+            "Rules of effective discussion",
+            "Agree/disagree expressions",
+            "Team-based speaking exercises"
+          ]
+        },
+        {
+          "week": 7,
+          "title": "Email & Formal Communication",
+          "topics": [
+            "Professional email writing",
+            "Introducing yourself in meetings",
+            "Phone call and message etiquette"
+          ]
+        },
+        {
+          "week": 8,
+          "title": "Review & Individual Feedback",
+          "topics": [
+            "Review of key lessons",
+            "One-on-one speaking session with instructor",
+            "Personalized improvement plan"
+          ]
+        },
+        {
+          "week": 9,
+          "title": "Final Assessment & Presentation",
+          "topics": [
+            "Oral fluency test",
+            "Presentation on a chosen topic",
+            "Course wrap-up and celebration"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "title": "Mock Interview Role Play",
+          "description": "Students participate in simulated job interviews to practice formal English communication."
+        },
+        {
+          "title": "Public Speaking Challenge",
+          "description": "Students prepare and deliver a 3-minute speech on a selected topic to build stage confidence."
+        }
+      ],
+      "instructor": {
+        "name": "Nadia Hossain",
+        "title": "Certified Spoken English Coach & Communication Trainer",
+        "bio": "Nadia Hossain has over 8 years of experience helping Bangladeshi students and professionals master spoken English for global opportunities. She holds certifications in TESOL and Communication Skills Training.",
+        "image": "/images/instructors/nadia.jpg",
+        "linkedin": "https://linkedin.com/in/nadia"
       },
-      {
-        "title": "Product Poster",
-        "tech": ["Photoshop"]
-      }
-    ],
-    "modules": [
-      {
-        "week": 1,
-        "title": "Design Basics & Color Theory"
-      },
-      {
-        "week": 3,
-        "title": "Photoshop Essentials"
-      },
-      {
-        "week": 6,
-        "title": "Illustrator for Branding"
-      },
-      {
-        "week": 10,
-        "title": "Final Project + Portfolio"
-      }
-    ],
-    "instructor": {
-      "name": "Ariana Rahman",
-      "title": "Graphics Design Mentor",
-      "image": "/images/instructors/ariana.jpg",
-      "linkedin": "https://linkedin.com/in/ariana"
-    },
-    "startDate": "2025-08-10",
-    "certificate": true
-  },
-  {
-    "id": "course-spoken-001",
-    "title": "Spoken English Mastery Program",
-    "slug": "spoken-english-course",
-    "category": "Spoken English",
-    "description": "Improve your speaking, listening, and pronunciation skills. Ideal for students, job seekers, and professionals.",
-    "thumbnail": "https://i.ibb.co/BvRzsFy/Course-1.png",
-    "banner": "/images/banners/spoken-banner.jpg",
-    "level": "Beginner Friendly",
-    "duration": "3 Months",
-    "language": "Bangla + English",
-    "price": {
-      "original": 6000,
-      "discounted": 3999,
-      "currency": "BDT"
-    },
-    "learningOutcomes": [
-      "Communicate fluently in English",
-      "Improve pronunciation and listening",
-      "Boost confidence for public speaking",
-      "Learn grammar and vocabulary"
-    ],
-    "modules": [
-      {
-        "week": 1,
-        "title": "Grammar & Sentence Structure"
-      },
-      {
-        "week": 2,
-        "title": "Daily Conversations Practice"
-      },
-      {
-        "week": 5,
-        "title": "Public Speaking & Interviews"
-      },
-      {
-        "week": 9,
-        "title": "Final Assessment & Presentation"
-      }
-    ],
-    "projects": [
-      {
-        "title": "Interview Role Play"
-      },
-      {
-        "title": "Public Speaking Practice"
-      }
-    ],
-    "instructor": {
-      "name": "Nadia Hossain",
-      "title": "Spoken English Coach",
-      "image": "/images/instructors/nadia.jpg",
-      "linkedin": "https://linkedin.com/in/nadia"
-    },
-    "startDate": "2025-08-20",
-    "certificate": true
-  }
-]
+      "startDate": "2025-08-20",
+      "certificate": true,
+      "features": [
+        "Interactive Live Classes (Zoom/Google Meet)",
+        "Downloadable Class Notes and PDFs",
+        "Access to Private Practice Group",
+        "Weekly Speaking Assignments with Feedback",
+        "Final Certification from Greate Bro Id"
+      ]
+    }
+  ]
