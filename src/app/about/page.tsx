@@ -5,6 +5,7 @@ import AboutHero from './components/Hero.about';
 import MissionAndVision from './components/MissionAndVision';
 import CoreValues from './components/CourseValue';
 import ContactInfo from './components/ContactInfo';
+import TeamSection from './components/TeamSection';
 
 
 const page = () => {
@@ -12,7 +13,8 @@ const page = () => {
         <div>
             <AboutHero />
             <MissionAndVision/>
-            <CoreValues/>
+            <TeamSection/>
+            {/* <CoreValues/> */}
             {/* <ContactInfo/> */}
             {/* <OurTeam /> */}
         </div>

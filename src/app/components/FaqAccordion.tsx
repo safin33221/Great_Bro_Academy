@@ -8,22 +8,31 @@ import SectionTitle from "./common/SectionTitle"
 
 const faqs = [
     {
-        question: "What is your return policy?",
-        answer: "We offer a 30-day return policy. Products must be unused and in original packaging.",
+        question: "Are the classes live or recorded?",
+        answer: "All classes are conducted live via Zoom. However, recordings are also provided for later review.",
     },
     {
-        question: "How long does shipping take?",
-        answer: "Shipping usually takes 3–5 business days depending on your location.",
+        question: "Do I need a laptop to join the course?",
+        answer: "A laptop is highly recommended for hands-on practice, but you can also join the live classes from a mobile or tablet.",
     },
     {
-        question: "Do you offer customer support?",
-        answer: "Yes, our customer support team is available 24/7 via email or live chat.",
+        question: "What if I miss a live class?",
+        answer: "Don’t worry! You’ll get access to the full class recording, so you can catch up anytime.",
     },
     {
-        question: "Can I track my order?",
-        answer: "Absolutely. Once your order ships, you'll receive a tracking number via email.",
+        question: "Will I get a certificate after course completion?",
+        answer: "Yes! You’ll receive a digital certificate upon successfully completing the course and final project.",
+    },
+    {
+        question: "How can I join the Zoom classes?",
+        answer: "After enrollment, you'll be added to a private student group where Zoom links and class schedules are shared.",
+    },
+    {
+        question: "Is there any support after the course ends?",
+        answer: "Yes, you’ll continue to receive career guidance, project feedback, and mentorship through our alumni community.",
     },
 ]
+
 
 const FaqAccordion = () => {
     return (

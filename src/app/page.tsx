@@ -4,6 +4,7 @@ import FaqAccordion from "./components/FaqAccordion";
 import HeroSlider from "./components/Hero"
 import Mentor from "./components/Mentors"
 import WhatsAppBtn from "./components/WhatsAppBtn";
+import WhyChooseUsSection from "./components/WhyChooseUsSection";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <CourseSection />
       <Mentor />
       <CoreValues/>
+      <WhyChooseUsSection/>
       <FaqAccordion/>
       <WhatsAppBtn/>
 

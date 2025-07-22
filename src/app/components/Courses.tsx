@@ -52,7 +52,7 @@ export default function CourseSection() {
               key={course.id}
               className="border bg-card rounded-lg shadow-md overflow-hidden flex flex-col"
             >
-              <div className="relative h-[300px] w-full ">
+              <div className="relative h-[320px] w-full ">
                 <Image
                   src={course.thumbnail}
                   alt={course.title}
