@@ -81,11 +81,11 @@ export function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                 <Link href="/contact">Contact</Link>
               </NavigationMenuLink>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
 
             {/* <NavigationMenuItem>
               <NavigationMenuTrigger>Dashboard</NavigationMenuTrigger>

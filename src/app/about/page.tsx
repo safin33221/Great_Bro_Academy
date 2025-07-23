@@ -6,6 +6,7 @@ import MissionAndVision from './components/MissionAndVision';
 import CoreValues from './components/CourseValue';
 import ContactInfo from './components/ContactInfo';
 import TeamSection from './components/TeamSection';
+import RadialTeam from './components/RadialNetworkGraph';
 
 
 const page = () => {
@@ -14,6 +15,7 @@ const page = () => {
             <AboutHero />
             <MissionAndVision/>
             <TeamSection/>
+           
             {/* <CoreValues/> */}
             {/* <ContactInfo/> */}
             {/* <OurTeam /> */}
