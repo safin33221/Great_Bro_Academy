@@ -41,7 +41,7 @@ export default function WhyChooseUsSection() {
                         data-aos="fade-up"
                         data-aos-duration="2000"
                         key={idx}
-                        className="bg-card border rounded-xl p-6 shadow-sm hover:shadow-md transition"
+                        className="bg-card border rounded-xl p-6 shadow-sm hover:shadow-md transition border-l-4 border-l-amber-600"
                     >
                         <div className="mb-4 flex items-center justify-center">{item.icon}</div>
                         <h3 className="text-xl font-bold text-foreground mb-2 text-center">{item.title}</h3>

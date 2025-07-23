@@ -38,7 +38,7 @@ const FaqAccordion = () => {
     return (
         <section className=" mx-auto p-4 md:p-16">
 
-            <SectionTitle title="Frequently Asked Questions" />
+            <SectionTitle title="Frequently Asked Questions_" />
             <Accordion
                 data-aos="fade-up"
                 data-aos-duration="3000"

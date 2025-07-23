@@ -15,7 +15,7 @@ const CoreValues = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
 
-            className="bg-gray-100 dark:bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+            className="bg-card shadow-xl rounded-xl p-6 shadow-md hover:shadow-lg transition">
             <FaBookOpen className="text-4xl text-orange-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Education for All</h3>
             <p className="text-gray-600 dark:text-gray-300">
@@ -28,7 +28,7 @@ const CoreValues = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
 
-            className="bg-gray-100 dark:bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+            className="bg-card shadow-xl rounded-xl p-6 shadow-md hover:shadow-lg transition">
             <FaHandsHelping className="text-4xl text-orange-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Student Support First</h3>
             <p className="text-gray-600 dark:text-gray-300">
@@ -41,7 +41,7 @@ const CoreValues = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
 
-            className="bg-gray-100 dark:bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+            className="bg-card shadow-xl rounded-xl p-6 shadow-md hover:shadow-lg transition">
             <FaBullseye className="text-4xl text-orange-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Practical &gt; Theoretical</h3>
             <p className="text-gray-600 dark:text-gray-300">

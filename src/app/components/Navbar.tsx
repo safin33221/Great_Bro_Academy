@@ -65,7 +65,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[500px] gap-2 md:grid-cols-2">
+                <ul className="grid w-[500px]  gap-2 grid-cols-1">
                   {courseCategories.map((course) => (
                     <ListItem key={course.title} href={course.href} title={course.title}>
                       {course.description}

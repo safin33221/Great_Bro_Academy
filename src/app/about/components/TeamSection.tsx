@@ -17,9 +17,9 @@ export default function TeamSection() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:hidden">
-                {teamData.map((instructor, index) => (
+                {teamData.map((instructor) => (
                     <div
-                        key={index}
+                        key={instructor.id}
                         className="border bg-card rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
                     >
                         <div className="mb-4">{instructor.icon}</div>
