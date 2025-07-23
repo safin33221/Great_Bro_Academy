@@ -7,9 +7,9 @@ import "swiper/css/navigation"
 import Link from "next/link"
 import Image, { StaticImageData } from "next/image"
 
-import img1 from "../../../public/images/Banner/WEB-DEB.png"
+import img1 from "../../../public/images/Banner/WEB-DEV-Recovered.webp"
 import img2 from "../../../public/images/Banner/GRAPHIC-DESIGN-COURSE.png"
-import img3 from "../../../public/images/Banner/UI-UX.png"
+import img3 from "../../../public/images/Banner/UI-UX-Recovered.webp"
 
 
 type Seminar = {
@@ -55,7 +55,7 @@ export default function HeroSlider() {
                 modules={[Navigation, Autoplay]}
                 autoplay={{ delay: 5000 }}
                 loop
-                className="w-full  h-[25vh] md:h-[30vh] lg:h-[70vh]"
+                className="w-full  h-[25vh] md:h-[30vh] lg:h-[80vh]"
             >
                 {seminars.map((seminar) => (
                     <SwiperSlide key={seminar.id}>

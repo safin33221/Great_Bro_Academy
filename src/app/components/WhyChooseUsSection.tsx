@@ -35,20 +35,33 @@ export default function WhyChooseUsSection() {
                 </p> */}
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8  mx-auto">
-                {features.map((item, idx) => (
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration="2000"
-                        key={idx}
-                        className="bg-card border rounded-xl p-6 shadow-sm hover:shadow-md transition border-l-4 border-l-amber-600"
-                    >
-                        <div className="mb-4 flex items-center justify-center">{item.icon}</div>
-                        <h3 className="text-xl font-bold text-foreground mb-2 text-center">{item.title}</h3>
-                        <p className="">{item.desc}</p>
-                    </div>
-                ))}
+            <div className="relative mx-auto max-w-7xl">
+                {/* Vertical line in center */}
+                <div className="absolute left-1/2 top-0 h-full w-1 bg-primary/20 transform -translate-x-1/2" />
+
+                {features.map((item, idx) => {
+                    const isLeft = idx % 2 === 0
+                    return (
+                        <div
+                            key={idx}
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            className={`relative mb-16 flex flex-col md:flex-row  items-center ${isLeft ? "md:justify-start" : "md:justify-end"
+                                }`}
+                        >
+                            <div className={`relative bg-card  border border-orange-200 rounded-xl shadow-md w-full md:w-[48%] p-6 ${isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
+                                }`}>
+                                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-md">
+                                    {item.icon}
+                                </div>
+                                <h3 className="text-xl font-semibold text-center mb-2">{item.title}</h3>
+                                <p className="text-center">{item.desc}</p>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
+
         </section>
     )
 }
