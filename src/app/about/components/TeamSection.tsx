@@ -16,18 +16,37 @@ export default function TeamSection() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:hidden">
-                {teamData.map((instructor) => (
+            <div className="relative pl-4 border-l-2 border-primary/30 space-y-10 md:hidden">
+                {teamData.map((instructor, index) => (
                     <div
                         key={instructor.id}
-                        className="border bg-card rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+                        className="relative pl-6"
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        data-aos-delay={index * 150}
                     >
-                        <div className="mb-4">{instructor.icon}</div>
-                        <h3 className="text-xl font-semibold text-foreground">{instructor.name}</h3>
-                        <p className="text-muted-foreground">{instructor.role}</p>
+                        {/* Dot indicator */}
+                        <div className="absolute -left-[10px] top-1 w-4 h-4 bg-primary rounded-full ring-4 ring-white"></div>
+
+                        {/* Card */}
+                        <div className="bg-card border rounded-xl shadow-md p-5 pt-12 relative flex flex-col items-center text-center hover:-translate-y-1 hover:scale-[1.01] transition duration-300">
+                            {/* Floating Icon */}
+                            <div className="absolute -top-8">
+                                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-primary to-amber-500 p-[2px]">
+                                    <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                                        {instructor.icon}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 className="text-lg font-semibold text-foreground mt-4">{instructor.name}</h3>
+                            <p className="text-sm text-muted-foreground">{instructor.role}</p>
+                        </div>
                     </div>
                 ))}
             </div>
+
+
 
             <div className="hidden md:flex items-center justify-center ">
                 <div className="w-1/2">

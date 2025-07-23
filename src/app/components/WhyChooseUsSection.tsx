@@ -49,7 +49,7 @@ export default function WhyChooseUsSection() {
                             className={`relative mb-16 flex flex-col md:flex-row  items-center ${isLeft ? "md:justify-start" : "md:justify-end"
                                 }`}
                         >
-                            <div className={`relative bg-card  border border-orange-200 rounded-xl shadow-md w-full md:w-[48%] p-6 ${isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
+                            <div className={`relative bg-card  border border-orange-200 rounded-xl shadow-md w-full md:w-[48%] hover:scale-105  duration-300 transition-all ease-linear p-6 ${isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0"
                                 }`}>
                                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-md">
                                     {item.icon}
