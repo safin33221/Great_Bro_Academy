@@ -56,9 +56,11 @@ const Footer = () => {
                 <div>
                     <h3 className="text-md font-semibold mb-2">Contact Us</h3>
                     <ul className="space-y-1 text-sm">
-                        <li className="text-bold" ><strong>greatbroacademy@gmail.com</strong></li>
+                        <li className="text-bold" >greatbroacademy@gmail.com</li>
+                        <hr />
                         <li >8801837429636</li>
-                        <li><strong>Address:</strong>
+                        <hr />
+                        <li>Location:
                             <address>
                                 House-2/C,Ground Floor, Road-13, <br />
                                 (Beside Lotus Kamal Tower) <br />
